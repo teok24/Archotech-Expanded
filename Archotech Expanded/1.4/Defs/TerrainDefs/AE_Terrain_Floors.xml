@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<TerrainTemplateDef>
+    <defName>AttomachineryFloor</defName>
+    <label>attomachinery ({0})</label>
+    <renderPrecedenceStart>242</renderPrecedenceStart>
+    <description>Ultra clean flooring which looks absolutely stunning. This floor almost looks alive with it's amount of detail. Anyone would be in awe just from standing on a tile.</description>
+    <texturePath>Terrain/Surfaces/AttomachineFlooring</texturePath>
+    <ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+    <statBases>
+      <Beauty>30</Beauty>
+      <WorkToBuild>800</WorkToBuild>
+      <Cleanliness>5</Cleanliness>
+    </statBases>
+    <costList>
+      <Attomachinery>40</Attomachinery>
+    </costList>
+	
+	<designatorDropdown>Floor_Attomachine</designatorDropdown>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+	<researchPrerequisites>
+      <li>Smithing</li>
+    </researchPrerequisites>
+	<tags>
+      <li>FineFloor</li>
+    </tags>
+  </TerrainTemplateDef>
+ 
+   <TerrainDef ParentName="FloorBase">
+	<defName>AttomachineryNaturalsoil</defName>
+	<label>attosoil</label>
+	<renderPrecedence>200</renderPrecedence>
+	<texturePath>Terrain/Surfaces/AttomachineFlooring</texturePath>
+    <description>The Attomachines pull energy from the quantum foam in order to nutriate the plant beyond comprehension. It perfectly assembles itself in such a way that the plant is perfectly grown within no time at all.</description>
+	<color>(139,69,19)</color>
+    <statBases>
+      <Beauty>30</Beauty>
+      <WorkToBuild>800</WorkToBuild>
+      <Cleanliness>5</Cleanliness>
+    </statBases>
+    <costList>
+      <Attomachinery>40</Attomachinery>
+    </costList>
+	
+	<designatorDropdown>Floor_Archosoil</designatorDropdown>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+	<researchPrerequisites>
+      <li>Smithing</li>
+	  <li>TreeSowing</li>
+    </researchPrerequisites>
+	<tags>
+      <li>FineFloor</li>
+    </tags>
+	<affordances>
+      <li>GrowSoil</li>
+    </affordances>
+	<fertility>6</fertility>
+  </TerrainDef>
+  
+  <TerrainTemplateDef>
+    <defName>PicomachineryFloor</defName>
+    <label>picomachinery ({0})</label>
+    <renderPrecedenceStart>242</renderPrecedenceStart>
+    <description>Ultra clean flooring which looks stunning. This floor almost looks alive with it's amount of detail. Anyone would be in awe just from standing on a tile.</description>
+    <texturePath>Terrain/Surfaces/PicomachineFlooring</texturePath>
+    <ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+    <statBases>
+      <Beauty>25</Beauty>
+      <WorkToBuild>800</WorkToBuild>
+      <Cleanliness>4</Cleanliness>
+    </statBases>
+    <costList>
+      <Picomachinery>25</Picomachinery>
+    </costList>
+	<designatorDropdown>Floor_Picomachine</designatorDropdown>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+	<researchPrerequisites>
+      <li>Smithing</li>
+    </researchPrerequisites>
+    <tags>
+      <li>FineFloor</li>
+    </tags>
+  </TerrainTemplateDef>
+  
+   <TerrainDef ParentName="FloorBase">
+	<defName>PicomachineryNaturalsoil</defName>
+	<label>picosoil</label>
+	<renderPrecedence>200</renderPrecedence>
+	<texturePath>Terrain/Surfaces/PicomachineFlooring</texturePath>
+    <description>Picomachines which simulate the near perfect environment for any plant. It first scans the plant, finds out what it needs, and then provides it perfectly, allowing for perfect growth rates.</description>
+	    <color>(139,69,19)</color>
+    <statBases>
+      <Beauty>25</Beauty>
+      <WorkToBuild>800</WorkToBuild>
+      <Cleanliness>4</Cleanliness>
+    </statBases>
+    <costList>
+      <Picomachinery>25</Picomachinery>
+    </costList>
+	<designatorDropdown>Floor_Archosoil</designatorDropdown>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+	<researchPrerequisites>
+      <li>Smithing</li>
+	  <li>TreeSowing</li>
+    </researchPrerequisites>
+    <tags>
+      <li>FineFloor</li>
+    </tags>
+	<affordances>
+      <li>GrowSoil</li>
+    </affordances>
+	<fertility>3</fertility>
+
+  </TerrainDef>
+  
+  <TerrainTemplateDef>
+    <defName>NanomachineryFloor</defName>
+    <label>nanomachinery ({0})</label>
+    <renderPrecedenceStart>242</renderPrecedenceStart>
+    <description>Ultra clean flooring which looks stunning. This floor almost looks alive with it's amount of detail. Anyone would be in awe just from standing on a tile.</description>
+    <texturePath>Terrain/Surfaces/NanomachineFlooring</texturePath>
+    <ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+    <statBases>
+      <Beauty>20</Beauty>
+      <WorkToBuild>700</WorkToBuild>
+      <Cleanliness>3</Cleanliness>
+    </statBases>
+    <costList>
+      <Nanomachinery>15</Nanomachinery>
+    </costList>
+	<designatorDropdown>Floor_Nanomachine</designatorDropdown>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	<researchPrerequisites>
+      <li>Smithing</li>
+    </researchPrerequisites>
+    <tags>
+      <li>FineFloor</li>
+    </tags>
+  </TerrainTemplateDef>
+  
+ <TerrainDef ParentName="FloorBase">
+	<defName>NanomachineryNaturalsoil</defName>
+	<label>nanosoil</label>
+	<renderPrecedence>200</renderPrecedence>
+    <description>The nanomachines reconfigure themselves into a soil like analogue, while also simulating nutrients and certain trace elements perfect for growing. While not as good as Picosoil or Attosoil, it certainly is a step up from regular dirt.</description>
+	<texturePath>Terrain/Surfaces/NanomachineFlooring</texturePath>
+	<color>(139,69,19)</color>
+    <statBases>
+      <Beauty>20</Beauty>
+      <WorkToBuild>700</WorkToBuild>
+      <Cleanliness>3</Cleanliness>
+    </statBases>
+    <costList>
+      <Nanomachinery>15</Nanomachinery>
+    </costList>
+	<designatorDropdown>Floor_Archosoil</designatorDropdown>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	<researchPrerequisites>
+      <li>Smithing</li>
+	  <li>TreeSowing</li>
+    </researchPrerequisites>
+    <tags>
+      <li>FineFloor</li>
+    </tags>
+	<affordances>
+      <li>GrowSoil</li>
+    </affordances>
+	<fertility>1.8</fertility>
+
+  </TerrainDef>
+  
+ </Defs>

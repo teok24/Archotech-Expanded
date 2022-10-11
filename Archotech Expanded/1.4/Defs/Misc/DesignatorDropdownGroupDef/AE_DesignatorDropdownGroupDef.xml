@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DesignatorDropdownGroupDef>
+    <defName>Floor_Attomachine</defName>
+	<label>attomachine floor</label>
+    <iconSource>Placed</iconSource>
+    <useGridMenu>true</useGridMenu>
+    <includeEyeDropperTool>true</includeEyeDropperTool>
+  </DesignatorDropdownGroupDef>
+  
+  
+  <DesignatorDropdownGroupDef>
+    <defName>Floor_Picomachine</defName>
+	<label>picomachine floor</label>
+    <iconSource>Placed</iconSource>
+    <useGridMenu>true</useGridMenu>
+    <includeEyeDropperTool>true</includeEyeDropperTool>
+  </DesignatorDropdownGroupDef>
+  
+  
+  <DesignatorDropdownGroupDef>
+    <defName>Floor_Nanomachine</defName>
+	<label>nanomachine floor</label>
+    <iconSource>Placed</iconSource>
+    <useGridMenu>true</useGridMenu>
+    <includeEyeDropperTool>true</includeEyeDropperTool>
+  </DesignatorDropdownGroupDef>
+  
+    <DesignatorDropdownGroupDef>
+		<defName>Floor_Archosoil</defName>
+		<label>archosoil</label>
+	</DesignatorDropdownGroupDef>
+  </Defs>
