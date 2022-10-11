@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+
+  <!-- Bases: Prosthetic body part (industrial tech) -->
+
+  <ThingDef Name="BodyPartProstheticBase" ParentName="BodyPartBase" Abstract="True">
+    <techLevel>Industrial</techLevel>
+    <thingCategories>
+      <li>BodyPartsProsthetic</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(154,124,104)</color>
+    </graphicData>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+    </statBases>
+  </ThingDef>
+  
+    <RecipeDef Name="SurgeryInstallBodyPartProstheticBase" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="True">
+    <skillRequirements>
+      <Medicine>4</Medicine>
+    </skillRequirements>
+  </RecipeDef>
+
+  <ThingDef Name="BodyPartProstheticMakeableBase" ParentName="BodyPartProstheticBase" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+      <researchPrerequisite>Prosthetics</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  
+ 
+
+  <!-- Prosthetic leg -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>AdvancedArchotechLeg</defName>
+    <label>advanced archotech leg</label>
+    <labelNoun>an advanced archotech leg</labelNoun>
+    <description>An installed advanced archotech leg.</description>
+    <descriptionHyperlinks><ThingDef>AdvancedArchotechLeg</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>AdvancedArchotechLeg</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>4</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+<ThingDef ParentName="BodyPartProstheticBase">
+    <defName>AdvancedArchotechLeg</defName>
+    <label>advanced archotech leg</label>
+    <description>An advanced version of the archotech's artificial leg. It looks the same as a regular leg, but allows you much faster movement. Its internal workings are a mystery to all human minds.</description>
+    <descriptionHyperlinks><RecipeDef>InstallAdvancedArchotechLeg</RecipeDef></descriptionHyperlinks>
+	<thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MarketValue>20000</MarketValue>
+      <Mass>4</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
+    <techHediffsTags>
+      <li>Archotech</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallAdvancedArchotechLeg</defName>
+    <label>install advanced archotech leg</label>
+    <description>Install an advanced archotech leg.</description>
+    <descriptionHyperlinks><ThingDef>AdvancedArchotechLeg</ThingDef></descriptionHyperlinks>
+    <jobString>Installing advanced archotech leg.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>AdvancedArchotechLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>AdvancedArchotechLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Leg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>AdvancedArchotechLeg</addsHediff>
+  </RecipeDef>
+
+  <!-- Prosthetic arm -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>AdvancedArchotechArm</defName>
+    <label>advanced archotech arm</label>
+    <labelNoun>an advanced archotech arm</labelNoun>
+    <description>An installed advanced archotech arm.</description>
+    <descriptionHyperlinks><ThingDef>AdvancedArchotechArm</ThingDef></descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>8.2</power> <!-- Same as natural fist -->
+            <cooldownTime>1.2</cooldownTime>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>AdvancedArchotechArm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>4</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>AdvancedArchotechArm</defName>
+    <label>advanced archotech arm</label>
+    <description>An advanced version of the archotech's artificial arm. It looks the same, but studies on glitterworlds have proven the arm to be sentient. This added feature allows the arm to make quick descisions a human brain couldn't possibly make. Its internal workings are a mystery to all human minds.</description>
+    <descriptionHyperlinks><RecipeDef>InstallAdvancedArchotechArm</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MarketValue>20000</MarketValue>
+      <Mass>4</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
+    <techHediffsTags>
+      <li>Archotech</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallAdvancedArchotechArm</defName>
+    <label>install advanced archotech arm</label>
+    <description>Install an advanced archotech arm.</description>
+    <descriptionHyperlinks><ThingDef>AdvancedArchotechArm</ThingDef></descriptionHyperlinks>
+    <jobString>Installing advanced archotech arm.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>AdvancedArchotechArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>AdvancedArchotechArm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>AdvancedArchotechArm</addsHediff>
+  </RecipeDef>
+  
+  <!-- Archotech Obliterator -->
+    <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ArchotechObliterator</defName>
+    <label>archotech obliterator</label>
+    <labelNoun>an archotech obliterator</labelNoun>
+    <description>An installed archotech obliterator.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechObliterator</ThingDef></descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>8.2</power> <!-- Same as natural fist -->
+            <cooldownTime>0.01</cooldownTime>
+			<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>ArchotechObliterator</spawnThingOnRemoved>
+    <addedPartProps>
+      <isGoodWeapon>true</isGoodWeapon>
+      <solid>true</solid>
+      <partEfficiency>1.7</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>ArchotechObliterator</defName>
+    <label>archotech obliterator</label>
+    <description>An artificial arm which employs all the benefits of a normal archotech arm, but includes new melee combat features based around attrition and enemy capture. With extremely fast servos the fist is able to extend and retract at remarkable speeds, causing a minature shockwave to form infront of the fist. Its internal workings are a mystery to all human minds.</description>
+    <descriptionHyperlinks><RecipeDef>InstallArchotechObliterator</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MarketValue>21000</MarketValue>
+      <Mass>4</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
+    <techHediffsTags>
+      <li>Archotech</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallArchotechObliterator</defName>
+    <label>install archotech obliterator</label>
+    <description>Install an archotech obliterator.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechObliterator</ThingDef></descriptionHyperlinks>
+    <jobString>Installing archotech obliterator.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ArchotechObliterator</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ArchotechObliterator</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ArchotechObliterator</addsHediff>
+  </RecipeDef>
+
+  <!-- Prosthetic heart -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ArchotechHeart</defName>
+    <label>Archotech heart</label>
+    <labelNoun>an Archotech heart</labelNoun>
+    <description>An installed archotech heart.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechHeart</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ArchotechHeart</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.7</partEfficiency>
+    </addedPartProps>
+	<stages>
+      <li>
+        <totalBleedFactor>0</totalBleedFactor>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>ArchotechHeart</defName>
+    <label>archotech heart</label>
+    <description>An artificial heart built by an archotech. Rather than pumping, the circulation of blood is a constant flow, releasing small nanomachines into the blood when needed. These small machines check for cholesterol, and other harmful things in arteries and capillaries, and metabolizes them into new nanomachinery, or into waste. Its internal workings are a mystery to all human minds.</description>
+    <descriptionHyperlinks><RecipeDef>InstallArchotechHeart</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
+    <techHediffsTags>
+      <li>Archotech</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallArchotechHeart</defName>
+    <label>install archotech heart</label>
+    <description>Install an archotech heart.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechHeart</ThingDef></descriptionHyperlinks>
+    <jobString>Installing archotech heart.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ArchotechHeart</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ArchotechHeart</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Heart</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ArchotechHeart</addsHediff>
+  </RecipeDef>
+
+  <!-- Kidneys -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ArchotechKidney</defName>
+    <label>archotech kidney</label>
+    <labelNoun>an archotech kidney</labelNoun>
+    <description>An installed archotech kidney.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechKidney</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ArchotechKidney</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.7</partEfficiency>
+    </addedPartProps>
+	<stages>
+      <li>
+        <statOffsets>
+          <ImmunityGainSpeed>0.05</ImmunityGainSpeed>
+        </statOffsets>
+      </li>
+	</stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>ArchotechKidney</defName>
+    <label>archotech kidney</label>
+    <description>An artificial kidney built by an archotech. It's capability to filter waste and extra water from the host's blood is so efficient that there's hardly any waste at all, instead being converted into useful antibodies and vitamins. Its internal workings are a mystery to all human minds.</description>
+    <descriptionHyperlinks><RecipeDef>InstallArchotechKidney</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
+    <techHediffsTags>
+      <li>Archotech</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallArchotechKidney</defName>
+    <label>install archotech kidney</label>
+    <description>Install an archotech kidney.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechKidney</ThingDef></descriptionHyperlinks>
+    <jobString>Installing archotech kidney.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ArchotechKidney</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ArchotechKidney</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Kidney</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ArchotechKidney</addsHediff>
+  </RecipeDef>
+  
+  
+  <!-- Livers -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ArchotechLiver</defName>
+    <label>archotech liver</label>
+    <labelNoun>an archotech liver</labelNoun>
+    <description>An installed archotech liver.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechLiver</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ArchotechLiver</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.7</partEfficiency>
+    </addedPartProps>
+	<stages>
+      <li>
+        <statOffsets>
+          <ImmunityGainSpeed>0.05</ImmunityGainSpeed>
+        </statOffsets>
+      </li>
+	</stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>ArchotechLiver</defName>
+    <label>archotech liver</label>
+    <description>An artificial liver built by an archotech. It's user is able to metabolize pretty much anything, from being able to drink pure grain alcohol to metabolizing the most harmful of drugs. Its internal workings are a mystery to all human minds.</description>
+    <descriptionHyperlinks><RecipeDef>InstallArchotechLiver</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
+    <techHediffsTags>
+      <li>Archotech</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallArchotechLiver</defName>
+    <label>install archotech liver</label>
+    <description>Install an archotech liver.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechLiver</ThingDef></descriptionHyperlinks>
+    <jobString>Installing archotech liver.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ArchotechLiver</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ArchotechLiver</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Liver</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ArchotechLiver</addsHediff>
+  </RecipeDef>
+  
+  
+  <!-- Pelvis -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ArchotechPelvis</defName>
+    <label>archotech pelvis</label>
+    <labelNoun>an archotech pelvis</labelNoun>
+    <description>An installed archotech pelvis.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechPelvis</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ArchotechPelvis</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.7</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>ArchotechPelvis</defName>
+    <label>archotech pelvis</label>
+    <description>An artificial pelvis built by an archotech. It doesn't do much, but allows for some improvements to the host, along with armor. Its workings are a mystery to all human minds.</description>
+    <descriptionHyperlinks><RecipeDef>InstallArchotechPelvis</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
+    <techHediffsTags>
+      <li>Archotech</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallArchotechPelvis</defName>
+    <label>install archotech pelvis</label>
+    <description>Install an archotech pelvis.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechPelvis</ThingDef></descriptionHyperlinks>
+    <jobString>Installing archotech pelvis.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ArchotechPelvis</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ArchotechPelvis</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Pelvis</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ArchotechPelvis</addsHediff>
+  </RecipeDef>
+  
+  <!-- Spine -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ArchotechSpine</defName>
+    <label>archotech spine</label>
+    <labelNoun>an archotech spine</labelNoun>
+    <description>An installed archotech spine.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechSpine</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ArchotechSpine</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.7</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>ArchotechSpine</defName>
+    <label>archotech spine</label>
+    <description>An artificial spine built by an archotech. Each individual disc and sector on the spine interacts with the will of it's host, and proceeds to adjust itself for optimal posture. Its internal workings are a mystery to all human minds.</description>
+    <descriptionHyperlinks><RecipeDef>InstallArchotechSpine</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
+    <techHediffsTags>
+      <li>Archotech</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallArchotechSpine</defName>
+    <label>install archotech spine</label>
+    <description>Install an archotech spine.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechSpine</ThingDef></descriptionHyperlinks>
+    <jobString>Installing archotech spine.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ArchotechSpine</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ArchotechSpine</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ArchotechSpine</addsHediff>
+  </RecipeDef>
+  
+  <!-- Lung -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ArchotechLung</defName>
+    <label>archotech lung</label>
+    <labelNoun>an archotech lung</labelNoun>
+    <description>An installed archotech lung.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechLung</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ArchotechLung</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.7</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>ArchotechLung</defName>
+    <label>archotech lung</label>
+    <description>An artificial lung built by an archotech. The optimization of respiration allows for even the smallest of breaths to last minutes. Its internal workings are a mystery to all human minds.</description>
+    <descriptionHyperlinks><RecipeDef>InstallArchotechLung</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
+    <techHediffsTags>
+      <li>Archotech</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallArchotechLung</defName>
+    <label>install archotech lung</label>
+    <description>Install an archotech lung.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechLung</ThingDef></descriptionHyperlinks>
+    <jobString>Installing archotech lung.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ArchotechLung</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ArchotechLung</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Lung</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ArchotechLung</addsHediff>
+  </RecipeDef>
+  
+  <!-- Stomach -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ArchotechStomach</defName>
+    <label>archotech stomach</label>
+    <labelNoun>an archotech stomach</labelNoun>
+    <description>An installed archotech stomach.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechStomach</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ArchotechStomach</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.7</partEfficiency>
+    </addedPartProps>
+	<stages>
+      <li>
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+		<hungerRateFactor>0.15</hungerRateFactor>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>ArchotechStomach</defName>
+    <label>archotech stomach</label>
+    <description>An artificial stomach built by an archotech. It's host is capable of eating as little, or as much as they want, as nutrition is automatically cared for by the stomach. It has full awareness of what it's host needs, from vitamins to minerals, and psychicly communicates this to them. Its internal workings are a mystery to all human minds.</description>
+    <descriptionHyperlinks><RecipeDef>InstallArchotechStomach</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
+    <techHediffsTags>
+      <li>Archotech</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallArchotechStomach</defName>
+    <label>install archotech stomach</label>
+    <description>Install an archotech stomach.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechStomach</ThingDef></descriptionHyperlinks>
+    <jobString>Installing archotech stomach.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ArchotechStomach</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ArchotechStomach</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Stomach</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ArchotechStomach</addsHediff>
+  </RecipeDef>
+  
+  <!-- Denture -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ArchotechDenture</defName>
+    <label>archotech denture</label>
+    <labelNoun>an archotech denture</labelNoun>
+    <description>An installed archotech denture.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechDenture</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ArchotechDenture</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.7</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>ArchotechDenture</defName>
+    <label>archotech denture</label>
+    <description>An artifical denture built by an archotech. Once installed in someone's mouth, it rapidly covers the other teeth until fully covered, or replaces missing teeth.</description>
+    <descriptionHyperlinks><RecipeDef>InstallArchotechDenture</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
+    <techHediffsTags>
+      <li>Archotech</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallArchotechDenture</defName>
+    <label>install archotech denture</label>
+    <description>Install an archotech denture.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechDenture</ThingDef></descriptionHyperlinks>
+    <jobString>Installing archotech denture.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ArchotechDenture</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ArchotechDenture</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Jaw</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ArchotechDenture</addsHediff>
+  </RecipeDef>
+  
+  <!-- Cochlear implant -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ArchotechEar</defName>
+    <label>archotech ear</label>
+    <labelNoun>an archotech ear</labelNoun>
+	<description>An installed archotech ear.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechEar</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ArchotechEar</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.7</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>ArchotechEar</defName>
+    <label>archotech ear</label>
+    <description>An artificial ear built by an archotech. Once installed at the base of the ear, It's user is able to hear for miles ahead with no loss of quality, allowing them to hear the wingbeats of a fly from miles away if they so wish. Its internal workings are a mystery to all human minds.</description>
+	<descriptionHyperlinks><RecipeDef>InstallArchotechEar</RecipeDef></descriptionHyperlinks>
+	<thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallArchotechEar</defName>
+    <label>install archotech ear</label>
+    <description>Install an archotech ear.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechEar</ThingDef></descriptionHyperlinks>
+    <jobString>Installing archotech ear.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ArchotechEar</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ArchotechEar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Ear</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ArchotechEar</addsHediff>
+  </RecipeDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ArchotechDeathClaw</defName>
+    <label>archotech death claw</label>
+    <labelNoun>an archotech death claw</labelNoun>
+	<description>An installed archotech death claw.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechDeathClaw</ThingDef></descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>claw</label>
+            <capacities>
+              <li>Scratch</li>
+            </capacities>
+            <power>30.0</power>
+            <cooldownTime>0.5</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>ArchotechDeathClaw</spawnThingOnRemoved>
+    <addedPartProps>
+      <isGoodWeapon>true</isGoodWeapon>
+      <solid>true</solid>
+      <partEfficiency>1.7</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+	<defName>ArchotechDeathClaw</defName>
+    <label>archotech death claw</label>
+    <description>An artificial arm built by an archotech. From the arm pertrudes giant spikes and claws which lash out and serrate anything that comes too close. Its internal workings are a mystery to all human minds.</description>
+	<thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MarketValue>21000</MarketValue>
+      <Mass>4</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
+	<techHediffsTags>
+	<li>Archotech</li>
+	<li>AdvancedWeapon</li>
+	</techHediffsTags>
+</ThingDef> 
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallArchotechDeathClaw</defName>
+    <label>install archotech death claw</label>
+    <description>Install an archotech death claw.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechDeathClaw</ThingDef></descriptionHyperlinks>
+    <jobString>Installing archotech death claw.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ArchotechDeathClaw</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ArchotechDeathClaw</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ArchotechDeathClaw</addsHediff>
+  </RecipeDef>
+
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>ArchotechBrainMelder</defName>
+    <label>archotech brain melder</label>
+    <labelNoun>an archotech brain melder</labelNoun>
+    <description>An installed archotech brain melder implant.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechBrainMelder</ThingDef></descriptionHyperlinks>
+    <comps>
+			<li Class="HediffCompProperties_HealPermanentWounds" />
+	</comps>
+    <stages>
+      <li>
+		<painFactor>0.2</painFactor>
+		<partEfficiencyOffset>3</partEfficiencyOffset>
+			<statOffsets>
+				<MeleeDodgeChance>10</MeleeDodgeChance>
+				<GlobalLearningFactor>10</GlobalLearningFactor>
+				<ResearchSpeed>1</ResearchSpeed>
+			</statOffsets>
+      </li>
+    </stages>
+    <spawnThingOnRemoved>ArchotechBrainMelder</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>ArchotechBrainMelder</defName>
+    <label>archotech brain melder</label>
+    <description>An impressive feat of medical engineering unlike anything else. From what has been gleaned by those who research archotechnologies, it seems to pump attomachines throughout the whole body from it's central core, which heal all scars. On top of this, it stimulates the brain's dopamine and seratonin receptors, giving it's user a great deal of satisfaction. Scientists still don't understand how it manages to do this while also keeping the user fully concious, or how it somehow improves their intellect and learning factors too.</description>
+    <descriptionHyperlinks><RecipeDef>InstallArchotechBrainMelder</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MarketValue>20000</MarketValue>
+      <Mass>4</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
+    <techHediffsTags>
+      <li>Archotech</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallArchotechBrainMelder</defName>
+    <label>install archotech brain melder</label>
+    <description>Install an archotech brain melder.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechBrainMelder</ThingDef></descriptionHyperlinks>
+    <jobString>Installing archotech brain melder.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ArchotechBrainMelder</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ArchotechBrainMelder</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ArchotechBrainMelder</addsHediff>
+  </RecipeDef>
+
+  <!-- Archotech Membrane -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>ArchotechMembrane</defName>
+    <label>archotech membrane</label>
+    <labelNoun>an archotech membrane</labelNoun>
+    <description>An installed archotech membrane.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechMembrane</ThingDef></descriptionHyperlinks>
+	<disablesNeeds>
+		<li>Comfort</li>
+	</disablesNeeds>
+    <comps>
+			<li Class="HediffCompProperties_HealPermanentWounds" />
+			<li Class="HediffCompProperties_SelfHeal" />
+		</comps>
+    <stages>
+      <li>
+		<partEfficiencyOffset>2</partEfficiencyOffset>
+			<statOffsets>
+				<MeleeDodgeChance>10</MeleeDodgeChance>
+				<ArmorRating_Sharp>10</ArmorRating_Sharp>
+				<ArmorRating_Blunt>10</ArmorRating_Blunt>
+				<ArmorRating_Heat>10</ArmorRating_Heat>
+				<GeneralLaborSpeed>10</GeneralLaborSpeed>
+			</statOffsets>
+      </li>
+	  
+    </stages>
+    <spawnThingOnRemoved>ArchotechMembrane</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>ArchotechMembrane</defName>
+    <label>archotech membrane</label>
+    <description>An extremely thin membrane over the entire body. It has many different uses, but it is mainly used for protection.</description>
+    <descriptionHyperlinks><RecipeDef>InstallArchotechMembrane</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MarketValue>25000</MarketValue>
+      <Mass>4</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
+    <techHediffsTags>
+      <li>Archotech</li>
+    </techHediffsTags>
+  </ThingDef>
+  
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallArchotechMembrane</defName>
+    <label>install archotech membrane</label>
+    <description>Install an archotech membrane.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechMembrane</ThingDef></descriptionHyperlinks>
+    <jobString>Installing archotech membrane.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ArchotechMembrane</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ArchotechMembrane</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ArchotechMembrane</addsHediff>
+  </RecipeDef>
+</Defs>

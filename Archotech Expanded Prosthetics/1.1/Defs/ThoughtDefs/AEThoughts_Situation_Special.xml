@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ThoughtDef>
+    <defName>ArchotechBrainMelder</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>ArchotechBrainMelder</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Brain Melder</label>
+        <description>This sensation is beyond compare. How am I thinking straight?</description>
+        <baseMoodEffect>40</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>ArchotechMembrane</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>ArchotechMembrane</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Comfortable Membrane</label>
+        <description>I'm always comfortable with this thing on.</description>
+        <baseMoodEffect>15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+ </Defs>

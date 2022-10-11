@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ThoughtDef>
+    <defName>ArchotechBrainMelder</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>ArchotechBrainMelder</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Brain Melder</label>
+        <description>Holy God.</description>
+        <baseMoodEffect>35</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>ArchotechChestMembrane</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>ArchotechChestMembrane</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Comfortable Membrane</label>
+        <description>It's like I'm in heaven with this thing on.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+ </Defs>
