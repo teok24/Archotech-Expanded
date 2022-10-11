@@ -85,7 +85,10 @@
       <ComponentSpacer>1</ComponentSpacer>
     </costList>
     <statBases>
-      <Mass>5</Mass>
+      <MarketValue>20000</MarketValue>
+      <Mass>4</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
     </statBases>
     <techHediffsTags>
       <li>Archotech</li>
@@ -159,7 +162,10 @@
       <ComponentSpacer>1</ComponentSpacer>
     </costList>
     <statBases>
-      <Mass>5</Mass>
+      <MarketValue>20000</MarketValue>
+      <Mass>4</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
     </statBases>
     <techHediffsTags>
       <li>Archotech</li>
@@ -234,7 +240,10 @@
       <ComponentSpacer>5</ComponentSpacer>
     </costList>
     <statBases>
-      <Mass>5</Mass>
+      <MarketValue>21000</MarketValue>
+      <Mass>4</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
     </statBases>
     <techHediffsTags>
       <li>Archotech</li>
@@ -281,6 +290,11 @@
       <solid>true</solid>
       <partEfficiency>1.7</partEfficiency>
     </addedPartProps>
+	<stages>
+      <li>
+        <totalBleedFactor>0</totalBleedFactor>
+      </li>
+    </stages>
   </HediffDef>
 
   <ThingDef ParentName="ArchoPartNormal">
@@ -293,7 +307,10 @@
       <ComponentSpacer>1</ComponentSpacer>
     </costList>
     <statBases>
-      <Mass>2</Mass>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
     </statBases>
     <techHediffsTags>
       <li>Archotech</li>
@@ -339,6 +356,13 @@
       <solid>true</solid>
       <partEfficiency>1.7</partEfficiency>
     </addedPartProps>
+	<stages>
+      <li>
+        <statOffsets>
+          <ImmunityGainSpeed>0.05</ImmunityGainSpeed>
+        </statOffsets>
+      </li>
+	</stages>
   </HediffDef>
 
   <ThingDef ParentName="ArchoPartNormal">
@@ -351,7 +375,10 @@
       <ComponentSpacer>1</ComponentSpacer>
     </costList>
     <statBases>
-      <Mass>2</Mass>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
     </statBases>
     <techHediffsTags>
       <li>Archotech</li>
@@ -398,6 +425,13 @@
       <solid>true</solid>
       <partEfficiency>1.7</partEfficiency>
     </addedPartProps>
+		<stages>
+      <li>
+        <statOffsets>
+          <ImmunityGainSpeed>0.05</ImmunityGainSpeed>
+        </statOffsets>
+      </li>
+	</stages>
   </HediffDef>
 
   <ThingDef ParentName="ArchoPartNormal">
@@ -410,7 +444,10 @@
       <ComponentSpacer>1</ComponentSpacer>
     </costList>
     <statBases>
-      <Mass>2</Mass>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
     </statBases>
     <techHediffsTags>
       <li>Archotech</li>
@@ -469,7 +506,10 @@
       <ComponentSpacer>1</ComponentSpacer>
     </costList>
     <statBases>
-      <Mass>2</Mass>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
     </statBases>
     <techHediffsTags>
       <li>Archotech</li>
@@ -527,7 +567,10 @@
       <ComponentSpacer>1</ComponentSpacer>
     </costList>
     <statBases>
-      <Mass>2</Mass>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
     </statBases>
     <techHediffsTags>
       <li>Archotech</li>
@@ -585,7 +628,10 @@
       <ComponentSpacer>1</ComponentSpacer>
     </costList>
     <statBases>
-      <Mass>2</Mass>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
     </statBases>
     <techHediffsTags>
       <li>Archotech</li>
@@ -631,6 +677,12 @@
       <solid>true</solid>
       <partEfficiency>1.7</partEfficiency>
     </addedPartProps>
+	<stages>
+      <li>
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+		<hungerRateFactor>0.15</hungerRateFactor>
+      </li>
+    </stages>
   </HediffDef>
 
   <ThingDef ParentName="ArchoPartNormal">
@@ -643,7 +695,10 @@
       <ComponentSpacer>1</ComponentSpacer>
     </costList>
     <statBases>
-      <Mass>2</Mass>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
     </statBases>
     <techHediffsTags>
       <li>Archotech</li>
@@ -701,7 +756,10 @@
       <ComponentSpacer>1</ComponentSpacer>
     </costList>
     <statBases>
-      <Mass>2</Mass>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
     </statBases>
     <techHediffsTags>
       <li>Archotech</li>
@@ -759,6 +817,15 @@
       <Picomachinery>3</Picomachinery>
       <ComponentSpacer>1</ComponentSpacer>
     </costList>
+	<statBases>
+      <MarketValue>2800</MarketValue>
+      <Mass>1</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
+	<techHediffsTags>
+      <li>Archotech</li>
+    </techHediffsTags>
   </ThingDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
@@ -829,6 +896,12 @@
 	<thingSetMakerTags>
 	<li>RewardSpecial</li>
 	</thingSetMakerTags>
+	<statBases>
+      <MarketValue>21000</MarketValue>
+      <Mass>4</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
 	<techHediffsTags>
 	<li>Archotech</li>
 	<li>AdvancedWeapon</li>
@@ -872,15 +945,14 @@
     <comps>
 			<li Class="HediffCompProperties_HealPermanentWounds" />
 	</comps>
-    <stages>
+	<stages>
       <li>
 		<painFactor>0.2</painFactor>
 		<partEfficiencyOffset>3</partEfficiencyOffset>
 			<statOffsets>
-				<RestRateMultiplier>3</RestRateMultiplier>
 				<MeleeDodgeChance>10</MeleeDodgeChance>
 				<GlobalLearningFactor>10</GlobalLearningFactor>
-				<MedicalPotency>2</MedicalPotency>
+				<ResearchSpeed>1</ResearchSpeed>
 			</statOffsets>
       </li>
     </stages>
@@ -899,6 +971,12 @@
       <Attomachinery>20</Attomachinery>
       <ComponentSpacer>5</ComponentSpacer>
     </costList>
+    <statBases>
+      <MarketValue>20000</MarketValue>
+      <Mass>4</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
     <techHediffsTags>
       <li>Archotech</li>
     </techHediffsTags>
@@ -972,6 +1050,12 @@
 	  <Picomachinery>20</Picomachinery>
       <ComponentSpacer>5</ComponentSpacer>
     </costList>
+    <statBases>
+      <MarketValue>25000</MarketValue>
+      <Mass>4</Mass>
+	  <ArmorRating_Sharp>1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+    </statBases>
     <techHediffsTags>
       <li>Archotech</li>
     </techHediffsTags>
